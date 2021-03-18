@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-               bat 'python lst.py'
+               bat 'python calc/lst.py'
             }
         }
       stage('Testing Stage'){
         steps{
-          bat 'python Testcalc.py' 
+          bat 'python calc/test/Testcalc.py'
         }
       }
       stage ('Deployment Stage'){
