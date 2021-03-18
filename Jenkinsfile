@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-               bat 'python reverse_list.py'
+               bat 'python lst.py'
             }
         }
       stage('Testing Stage'){
         steps{
-          echo 'Test is completed'
+          bat 'python Testcalc.py' 
         }
       }
       stage ('Deployment Stage'){
